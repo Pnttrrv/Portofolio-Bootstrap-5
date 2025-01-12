@@ -9,3 +9,103 @@ body {
 footer a {
   text-decoration: none;
 }
+
+.card-img-top:hover {
+  transform: translateZ(50px) scaleY(1);
+}
+
+/* mycat section */
+.cat-box {
+  background-color: rgba(255, 247, 150, 0.3);
+  border-radius: 10px;
+  height: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+  /* overflow: hidden; */
+}
+
+.cat-box:hover {
+  background-color: rgba(255, 247, 150, 0.6);
+}
+
+.cat-box::before {
+  content: 'My';
+  position: absolute;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cat-box:hover::before {
+  opacity: 0.2;
+}
+
+.cat-box::after {
+  content: 'Cat';
+  position: absolute;
+  color: #fff;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cat-box:hover::after {
+  opacity: 0.2;
+}
+
+.chiko {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  transform: translate3d(0, 0, 80px);
+}
+
+.cat-box:hover .chiko {
+  top: 20px;
+  opacity: 1;
+}
+
+.cat-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cat-box:hover .cat-btn {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.cat-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 100px);
+  max-width: 350px;
+  transition: 0.5s;
+  filter: grayscale(100%);
+}
+
+.cat-box:hover .cat-img {
+  transform: translate3d(-50%, -52%, 100px) scale(1.2);
+  filter: grayscale(0);
+}

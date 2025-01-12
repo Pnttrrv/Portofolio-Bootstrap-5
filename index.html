@@ -42,7 +42,7 @@
     <!-- navbar end -->
     <!-- Jumbotron start -->
     <section class="jumbotron text-center" style="background-color: var(--bs-body-bg); padding-top: 120px">
-      <img src="img/main.png" alt="main" class="rounded-circle img-thumbnail d-flex m-auto" style="width: 200px" />
+      <img data-tilt src="img/main.png" alt="main" class="rounded-circle img-thumbnail d-flex m-auto" style="width: 200px" />
       <h1 class="display-4">Pnttrrv</h1>
       <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -129,6 +129,38 @@
           </div>
         </div>
       </div>
+      <section id="my-cat">
+        <div class="container">
+          <div class="row text-center mb-4">
+            <div class="col">
+              <h2 class="pt-5">My Cats</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="cat-box" data-tilt style="transform: perspective(1000px)">
+                <h4 class="chiko">Chiko</h4>
+                <img src="img/cat1.png" alt="chiko" class="cat-img" />
+                <a href="#" class="btn btn-light cat-btn">Story</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="cat-box" data-tilt style="transform-style: preserve-3d; transform: perspective(1000px)">
+                <h4 class="chiko">Chiko</h4>
+                <img src="img/cat1.png" alt="chiko" class="cat-img" />
+                <a href="#" class="btn btn-light cat-btn">Story</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="cat-box" data-tilt style="transform-style: preserve-3d; transform: perspective(1000px)">
+                <h4 class="chiko">Chiko</h4>
+                <img src="img/cat1.png" alt="chiko" class="cat-img" />
+                <a href="#" class="btn btn-light cat-btn">Story</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#FFF796"
@@ -237,6 +269,15 @@
             console.log('Success!', response);
           })
           .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
+    <!-- tils js -->
+    <script src="vanilla-tilt.js"></script>
+    <!-- tilt js -->
+    <script>
+      VanillaTilt.init(document.querySelectorAll('.cat-box'), {
+        max: 25,
+        speed: 400,
       });
     </script>
   </body>
